@@ -1,6 +1,6 @@
 namespace Nancy.Api.Modules
 {
-    using Nancy.Api.Objects;
+    using Nancy.Api.Queries;
     using Nancy.Responses.Negotiation;
 
     public class CustomerModule : NancyModule
@@ -28,10 +28,5 @@ namespace Nancy.Api.Modules
                 .WithStatusCode(statusCode)
                 .WithModel(customer);
         }
-    }
-
-    public interface IGetCustomerQuery
-    {
-        Customer Execute(int customerId);
     }
 }
