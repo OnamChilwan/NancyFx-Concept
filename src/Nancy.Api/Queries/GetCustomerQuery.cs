@@ -11,7 +11,9 @@ namespace Nancy.Api.Queries
     {
         public Customer Execute(int customerId)
         {
-            return new Customer();
+            var dateOfBirth = new BirthDate { Day = 23, Month = 8, Year = 84 };
+
+            return new Customer { DateOfBirth = dateOfBirth, Forename = "Onam", Surname = "Chilwan" };
         }
     }
 }
